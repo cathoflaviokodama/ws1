@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+			window.addEventListener("load",function() {
+				var socket = new WebSocket("ws://localhost:4001/wdata");
+				socket.onopen = function (e) {
+					console.log("open",e);
+					socket.send("client opened"); 
+				};
+				socket.onclose = function(e) {
+					console.log("close",e);
+				};
+				socket.onerror = function(e) {
+					console.log("error",e);
+				};
+				socket.onmessage = function(e) {
+					console.log("message",e);
+					socket.send("pong");
+				};
+			});
+		</script>
+	</head>
+	<body>
+		testeasdaassadasd
+	</body>
+</html>
+
+

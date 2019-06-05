@@ -1,0 +1,17 @@
+{
+  "name": "sandbox2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "chokidar": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ws-routes": "^1.1.0",
+    "ws": "^7.0.0"
+  }
+}
