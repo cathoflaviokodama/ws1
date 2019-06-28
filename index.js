@@ -31,7 +31,9 @@ app.websocket('/wdata', function(info, cb, next) {
 			console.log("<<",msg);
 		});
 		serverEvents.on("refresh",() => {
-			socket.send("refresh");
+			if(socket.readyState == 1) {
+				socket.send("refresh");
+			}
 		});
 	});
 });
