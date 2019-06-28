@@ -15,14 +15,17 @@
 					console.log("error",e);
 				};
 				socket.onmessage = function(e) {
-					console.log("message",e);
-					socket.send("pong");
+					if(e.data == "refresh") {
+						location.reload(true);
+					}
+					//console.log("message",e);
+					//socket.send("pong");
 				};
 			});
 		</script>
 	</head>
 	<body>
-		testeasdaassadasd
+		Hello World 2!
 	</body>
 </html>
 
